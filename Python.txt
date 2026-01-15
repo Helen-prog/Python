@@ -147,3 +147,9 @@ a63b96c6cfbb555a233c9a56563d56a2537a9550
 3) git push
 
 
+git clone https://github.com/Helen-prog/Python.git
+
+git pull
+- забирает изменения с удаленного репозитория на локальный
+
+
