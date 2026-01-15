@@ -3229,43 +3229,43 @@ import re
 # print(time.strftime("%d.%m.%Y", time.localtime(os.path.getmtime(path))))
 
 
-import os
-
-dirs = [r'Work\F1', r'Work\F2\F21']
+# import os
+#
+# dirs = [r'Work\F1', r'Work\F2\F21']
 
 # for d in dirs:
 #     os.makedirs(d)
 
-files = {
-    'Work': ['w.txt'],
-    r'Work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
-    r'Work\F2\F21': ['f211.txt', 'f212.txt']
-}
-
-for d, f in files.items():
-    for file in f:
-        file_path = os.path.join(d, file)
-        open(file_path, 'w').close()
-
-
-file_with_text = [r'Work\w.txt', r'Work\F1\f12.txt', r'Work\F2\F21\f211.txt', r'Work\F2\F21\f212.txt']
-
-for file in file_with_text:
-    with open(file, 'w') as f:
-        f.write(f"Какой-то текст для файла {file}")
-
-
-def print_tree(root, topdown):
-    print(f"Обход {root} {'сверху вниз' if topdown else 'снизу вверх'}")
-    for root, dirs, files in os.walk(root, topdown):
-        print(root)
-        print(dirs)
-        print(files)
-    print("-" * 50)
-
-
-print_tree("Work", False)
-print_tree("Work", True)
+# files = {
+#     'Work': ['w.txt'],
+#     r'Work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
+#     r'Work\F2\F21': ['f211.txt', 'f212.txt']
+# }
+#
+# for d, f in files.items():
+#     for file in f:
+#         file_path = os.path.join(d, file)
+#         open(file_path, 'w').close()
+#
+#
+# file_with_text = [r'Work\w.txt', r'Work\F1\f12.txt', r'Work\F2\F21\f211.txt', r'Work\F2\F21\f212.txt']
+#
+# for file in file_with_text:
+#     with open(file, 'w') as f:
+#         f.write(f"Какой-то текст для файла {file}")
+#
+#
+# def print_tree(root, topdown):
+#     print(f"Обход {root} {'сверху вниз' if topdown else 'снизу вверх'}")
+#     for root, dirs, files in os.walk(root, topdown):
+#         print(root)
+#         print(dirs)
+#         print(files)
+#     print("-" * 50)
+#
+#
+# print_tree("Work", False)
+# print_tree("Work", True)
 
 # Work\w.txt
 # Work\F1\f11.txt
@@ -3273,3 +3273,5 @@ print_tree("Work", True)
 # Work\F1\f13.txt
 # Work\F2\F21\f211.txt
 # Work\F2\F21\f212.txt
+
+print("Вносим изменения")
